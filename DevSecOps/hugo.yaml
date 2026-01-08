@@ -1,0 +1,53 @@
+baseURL: "http://localhost:1313/"
+title: "DevSecOps"
+languageCode: "en-us"
+theme: "docsy"
+
+enableGitInfo: true
+enableRobotsTXT: true
+
+module:
+  proxy: "direct"
+  imports:
+    - path: github.com/google/docsy
+
+contentDir: content
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+languages:
+  en:
+    languageName: English
+    weight: 1
+
+params:
+  description: "GitOps-driven DevSecOps labs and Kubernetes security"
+  offlineSearch: true
+
+  github_repo: "https://github.com/shivam199063/DevSecOps"
+  github_project_repo: "https://github.com/shivam199063/DevSecOps"
+
+  ui:
+    sidebar_menu_compact: true
+    sidebar_search_disable: false
+    breadcrumb_disable: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+menu:
+  main:
+    - name: DevSecOps
+      url: "DevSecOps"
+      weight: 10
+    - name: DevOps
+      url: "/DevSecOps/devops/"
+      weight: 20
+    - name: Security
+      url: "/DevSecOps/security/"
+      weight: 30
+    - name: Development
+      url: "/DevSecOps/development/"
+      weight: 40
