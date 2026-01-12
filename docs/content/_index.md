@@ -1,6 +1,5 @@
 ---
 title: "Author"
-description: "About the author of the DevSecOps Knowledge Base"
 type: docs
 toc: false
 ---
