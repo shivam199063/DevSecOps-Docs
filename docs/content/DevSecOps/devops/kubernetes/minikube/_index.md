@@ -5,8 +5,6 @@ type: docs
 toc: false
 ---
 
-This section documents my **Minikube-based Kubernetes lab**, designed to behave as close to production as possible.
-
 ## What’s Inside
 
 

@@ -5,8 +5,6 @@ type: docs
 toc: false
 ---
 
-This section documents a **GitOps-based Wazuh deployment on Kubernetes**.
-
 ## Architecture
 
 - Wazuh Indexer
@@ -26,4 +24,3 @@ This section documents a **GitOps-based Wazuh deployment on Kubernetes**.
 🧪 **Environment**: Minikube  
 🔁 **Controller**: Argo CD  
 
-👉 GitOps application:

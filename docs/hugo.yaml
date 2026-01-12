@@ -21,7 +21,7 @@ languages:
     weight: 1
 
 params:
-  description: "GitOps-driven DevSecOps labs and Kubernetes security"
+  description: "GitOps-driven DevSecOps labs."
   offlineSearch: true
 
   github_repo: "https://github.com/shivam199063/DevSecOps"
@@ -39,15 +39,12 @@ markup:
 
 menu:
   main:
-    - name: DevSecOps
-      url: "DevSecOps"
-      weight: 10
     - name: DevOps
       url: "/DevSecOps/devops/"
-      weight: 20
+      weight: 10
     - name: Security
       url: "/DevSecOps/security/"
-      weight: 30
+      weight: 20
     - name: Development
       url: "/DevSecOps/development/"
-      weight: 40
+      weight: 30
