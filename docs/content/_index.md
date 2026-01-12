@@ -4,7 +4,7 @@ type: docs
 toc: false
 ---
 
-![Author](images/author.png)
+![Author](../images/author.png)
 
 Welcome to my **DevSecOps Knowledge Base**.
 
