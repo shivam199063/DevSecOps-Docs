@@ -39,12 +39,12 @@ jobs:
 
       - name: Build site
         run: |
-          hugo --source docs --destination public --minify --gc
+           hugo --source docs --minify --gc
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: docs/public
 
   deploy:
     needs: build
