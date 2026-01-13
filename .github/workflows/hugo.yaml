@@ -1,9 +1,10 @@
-name: Build and Deploy Hugo Site
+name: Build and Deploy Hugo Site to GitHub Pages
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -11,14 +12,24 @@ permissions:
   id-token: write
 
 jobs:
-  build-deploy:
-    environment:
-      name: github-pages
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Node deps
+        run: |
+          cd docs
+          npm init -y
+          npm ci || npm install
+          npm install postcss postcss-cli autoprefixer
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -26,14 +37,20 @@ jobs:
           hugo-version: "latest"
           extended: true
 
-      - name: Build Hugo site
+      - name: Build site
         run: |
-          hugo --source docs --destination public --minify
+          hugo --source docs --destination public --minify --gc
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
 
-      - name: Deploy to GitHub Pages
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy to Pages
         uses: actions/deploy-pages@v4
