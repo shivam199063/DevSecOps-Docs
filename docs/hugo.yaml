@@ -5,7 +5,6 @@ theme: "docsy"
 
 enableGitInfo: true
 enableRobotsTXT: true
-canonifyURLs: true
 
 module:
   proxy: "direct"
