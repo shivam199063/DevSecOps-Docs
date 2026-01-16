@@ -1,5 +1,5 @@
 baseURL: "http://shivamsaini.in"
-title: "Shivam Saini"
+title: "DevSecOps"
 languageCode: "en-us"
 theme: "docsy"
 
@@ -40,11 +40,11 @@ markup:
 menu:
   main:
     - name: DevOps
-      url: "/DevSecOps/devops/"
+      url: "/devops/"
       weight: 10
     - name: Security
-      url: "/DevSecOps/security/"
+      url: "/security/"
       weight: 20
     - name: Development
-      url: "/DevSecOps/development/"
+      url: "/development/"
       weight: 30
