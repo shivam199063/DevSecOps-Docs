@@ -1,31 +1,50 @@
-baseURL: "https://shivamsaini.in/"
-title: "DevSecOps"
+baseURL: "http://shivamsaini.in"
+title: "Shivam Saini"
 languageCode: "en-us"
 theme: "docsy"
 
 enableGitInfo: true
 enableRobotsTXT: true
 
-sitemap:
-  changefreq: weekly
-  priority: 0.5
-  filename: sitemap.xml
+module:
+  proxy: "direct"
+  imports:
+    - path: github.com/google/docsy
+
+contentDir: content
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+languages:
+  en:
+    languageName: English
+    weight: 1
 
 params:
-  description: "GitOps-driven DevSecOps labs, Kubernetes security, CI/CD, and cloud security notes."
+  description: "GitOps-driven DevSecOps labs."
   offlineSearch: true
 
   github_repo: "https://github.com/shivam199063/DevSecOps"
   github_project_repo: "https://github.com/shivam199063/DevSecOps"
 
+  ui:
+    sidebar_menu_compact: true
+    sidebar_search_disable: false
+    breadcrumb_disable: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 menu:
   main:
     - name: DevOps
-      url: "/devops/"
+      url: "/DevSecOps/devops/"
       weight: 10
     - name: Security
-      url: "/security/"
+      url: "/DevSecOps/security/"
       weight: 20
     - name: Development
-      url: "/development/"
+      url: "/DevSecOps/development/"
       weight: 30
