@@ -8,7 +8,7 @@ weight: 3
 
 ## Day 1
 
-- Print "Hello, <NAME>" + take input of your anme and print it
+- Print "Hello, <NAME>" + take input of your name and print it
 - 
 
 
